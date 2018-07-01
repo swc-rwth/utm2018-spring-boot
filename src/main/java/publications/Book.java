@@ -1,7 +1,11 @@
 package publications;
 
+import idgeneration.IDFactory;
+import idgeneration.IDGenerator;
+
 public class Book extends PublishingHousePublication {
 
+	
    protected String isbn;
 
    public String getIsbn() {
@@ -19,5 +23,9 @@ public class Book extends PublishingHousePublication {
 
    public Book(String theID) {
       super(theID);
+   }
+   
+   public Book() {
+	   super("");
    }
 }

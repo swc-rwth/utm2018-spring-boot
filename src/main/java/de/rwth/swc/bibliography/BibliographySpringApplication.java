@@ -16,16 +16,4 @@ public class BibliographySpringApplication {
 		SpringApplication.run(BibliographySpringApplication.class, args);
 	}
 	
-	@Bean
-	public Bibliography createBibliography(){
-		return new Bibliography();
-	}
-	
-	@Bean 
-	public AdminTool createAdminTool() {
-		AdminTool admin = new AdminTool();
-		admin.setBibliography(createBibliography());
-		return admin;
-		
-	}
 }

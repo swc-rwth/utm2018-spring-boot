@@ -1,5 +1,10 @@
 package de.rwth.swc.oosc.swcarchitect.webservice;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
+import java.net.URI;
+
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.helpers.MessageFormatter;
@@ -13,15 +18,12 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import de.rwth.swc.bibliography.BibliographySpringApplication;
 
-import java.net.URI;
-
-import static org.assertj.core.api.Assertions.assertThat;
-
 /**
  * Created by andy on 27.01.17.
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest(classes=BibliographySpringApplication.class,webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+@Ignore
 public class PublicationResourceTest {
 
     @Autowired
