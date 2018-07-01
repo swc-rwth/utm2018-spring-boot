@@ -18,6 +18,17 @@ pipeline {
                 sh "mvn -B clean package -DskipTests=true"
             }
         }
+        stage("Build w/o Test") {
+            steps {
+                sh "mvn -B clean package -DskipTests=true"
+            }
+        }
+        
+        stage("Test") {
+            steps {
+                sh "mvn -B test"
+            }
+        }
     }
 }
 
