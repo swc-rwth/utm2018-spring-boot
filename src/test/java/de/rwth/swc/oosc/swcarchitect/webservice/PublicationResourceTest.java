@@ -11,6 +11,8 @@ import org.springframework.http.RequestEntity;
 import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import de.rwth.swc.bibliography.BibliographySpringApplication;
+
 import java.net.URI;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -19,7 +21,7 @@ import static org.assertj.core.api.Assertions.assertThat;
  * Created by andy on 27.01.17.
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+@SpringBootTest(classes=BibliographySpringApplication.class,webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class PublicationResourceTest {
 
     @Autowired
